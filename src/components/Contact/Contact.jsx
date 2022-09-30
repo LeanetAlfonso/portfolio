@@ -10,11 +10,17 @@ const Contact = () => {
 				<h3 className='text-light'>Let's work together!</h3>
 				<form
 					className='form'
-					name='contact'
-					method='POST'
-					data-netlify-recaptcha='true'
+					name='contact v1'
+					method='post'
 					data-netlify='true'
+					onSubmit='submit'
+					data-netlify-honeypot='bot-field'
+					data-netlify-recaptcha='true'
 				>
+					<input type='hidden' name='form-name' value='contact v1'></input>
+					<div hidden>
+						<input name='bot-field' />
+					</div>
 					<div className='fields'>
 						<div className='field'>
 							<input
