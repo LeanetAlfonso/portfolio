@@ -1,0 +1,76 @@
+header {
+	/* height: 100vh; */
+	overflow: hidden;
+}
+.header__container {
+	text-align: left;
+	height: 100%;
+	position: relative;
+	padding-top: 6rem;
+}
+.header__container .big-heading {
+	margin: 1rem 0rem;
+}
+
+.header__container h2 {
+	font-weight: 700;
+}
+
+/* ============== SCROLL DOWN ============== */
+
+.scroll__down {
+	flex-wrap: nowrap;
+	color: var(--color-light);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	right: 50px;
+	bottom: 0;
+	-webkit-animation: mover 1s infinite alternate;
+	animation: mover 1s infinite alternate;
+}
+
+.scroll__down::after {
+	content: '';
+	width: 1px;
+	height: 5rem;
+	margin-top: 1rem;
+	bottom: 0;
+	background: var(--color-light);
+	transform: translateY(25%);
+}
+.scrolling {
+	white-space: nowrap;
+	transition: 1000ms;
+	transform: translateY(-100vh);
+}
+
+/* ============== MEDIA QUERIES ============== */
+
+@-webkit-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-20px);
+	}
+}
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-20px);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		height: 100vh;
+	}
+	.scroll__down {
+		display: none;
+	}
+}
