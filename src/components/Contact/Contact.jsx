@@ -8,7 +8,13 @@ const Contact = () => {
 			<div className='container content__container about__container contact__container'>
 				<Caption caption='Get In Touch' icon='contact' />
 				<h3 className='text-light'>Let's work together!</h3>
-				<form className='form' name='contact' method='POST' data-netlify='true'>
+				<form
+					className='form'
+					name='contact'
+					method='POST'
+					data-netlify-recaptcha='true'
+					data-netlify='true'
+				>
 					<div className='fields'>
 						<div className='field'>
 							<input
@@ -41,13 +47,9 @@ const Contact = () => {
 							<div data-netlify-recaptcha='true'></div>
 						</div>
 					</div>
-					<div
-						title='send message'
-						type='submit'
-						className='btn btn-primary btn-submit'
-					>
+					<button className='btn btn-primary btn-submit' type='submit'>
 						Send Message
-					</div>
+					</button>
 				</form>
 			</div>
 		</section>
