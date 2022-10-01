@@ -10,7 +10,12 @@ const encode = (data) => {
 };
 
 const Contact = () => {
-	const [formData, setFormData] = useState({name: '', email: '', message: ''});
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		message: '',
+		'bot-field': '',
+	});
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
 	let navigate = useNavigate();
@@ -20,7 +25,10 @@ const Contact = () => {
 		e.preventDefault();
 	};
 	useEffect(() => {
-		if (isSubmitted) {
+		const isValid = formData['bot-field'] === '';
+		if (!isValid) {
+			alert('Are you sure you are a human?');
+		} else if (isSubmitted) {
 			fetch('/', {
 				method: 'POST',
 				headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -30,7 +38,9 @@ const Contact = () => {
 					navigate('/thank-you/');
 				})
 				.then(() => setIsSubmitted(false))
-				.then(() => setFormData({name: '', email: '', message: ''}))
+				.then(() =>
+					setFormData({name: '', email: '', message: '', 'bot-field': ''})
+				)
 				.catch((error) => alert(error));
 		}
 	}, [formData, isSubmitted, navigate]);
@@ -54,9 +64,7 @@ const Contact = () => {
 					netlify-honeypot='bot-field'
 				>
 					<div hidden>
-						<label>
-							Don't fill this out if you're human: <input name='bot-field' />
-						</label>
+						<input name='bot-field' value='' readOnly />
 					</div>
 
 					<input type='hidden' name='form-name' value='contact' />
