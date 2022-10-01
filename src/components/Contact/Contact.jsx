@@ -35,13 +35,13 @@ const Contact = () => {
 				body: encode({'form-name': 'contact', ...formData}),
 			})
 				.then(() => {
-					navigate('/thank-you/');
+					navigate('/thank-you');
 				})
 				.then(() => setIsSubmitted(false))
 				.then(() =>
 					setFormData({name: '', email: '', message: '', 'bot-field': ''})
 				)
-				.catch((error) => alert(error));
+				.catch(() => navigate('/sorry'));
 		}
 	}, [formData, isSubmitted, navigate]);
 
@@ -60,7 +60,7 @@ const Contact = () => {
 					data-netlify='true'
 					name='contact'
 					method='POST'
-					action='/thank-you/'
+					action='/thank-you'
 					netlify-honeypot='bot-field'
 				>
 					<div hidden>
