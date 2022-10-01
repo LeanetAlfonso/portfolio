@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Contact.css';
 import Caption from '../Caption/Caption';
 import {useNavigate} from 'react-router-dom';
@@ -11,25 +11,30 @@ const encode = (data) => {
 
 const Contact = () => {
 	const [formData, setFormData] = useState({name: '', email: '', message: ''});
-
-	// const [name, setName] = useState('');
-	// const [email, setEmail] = useState('');
-	// const [message, setMessage] = useState('');
+	const [isSubmitted, setIsSubmitted] = useState(false);
 
 	let navigate = useNavigate();
 
 	const handleSubmit = (e) => {
-		console.log(...formData);
-		fetch('/', {
-			method: 'POST',
-			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-			body: encode({'form-name': 'contact', ...formData}),
-		})
-			.then(() => navigate('/thank-you/'))
-			.catch((error) => alert(error));
-
+		setIsSubmitted(true);
 		e.preventDefault();
 	};
+
+	useEffect(() => {
+		if (isSubmitted) {
+			fetch('/', {
+				method: 'POST',
+				headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+				body: encode({'form-name': 'contact', ...formData}),
+			})
+				.then(() => {
+					navigate('/thank-you/');
+				})
+				.then(() => setIsSubmitted(false))
+				.then(() => setFormData({name: '', email: '', message: ''}))
+				.catch((error) => alert(error));
+		}
+	}, [formData, isSubmitted, navigate]);
 
 	const handleChange = (e) => {
 		setFormData({...formData, [e.target.name]: e.target.value});
@@ -63,8 +68,6 @@ const Contact = () => {
 								id='name'
 								placeholder='Name *'
 								required
-								// value={name}
-								// onChange={(e) => setName(e.target.value)}
 								value={formData.name}
 								onChange={handleChange}
 							/>
@@ -77,8 +80,6 @@ const Contact = () => {
 								id='email'
 								placeholder='Email *'
 								required
-								// value={email}
-								// onChange={(e) => setEmail(e.target.value)}
 								value={formData.email}
 								onChange={handleChange}
 							/>
@@ -91,8 +92,6 @@ const Contact = () => {
 								placeholder='Message *'
 								rows='6'
 								required
-								// value={message}
-								// onChange={(e) => setMessage(e.target.value)}
 								value={formData.message}
 								onChange={handleChange}
 							/>
