@@ -11,11 +11,10 @@ const Contact = () => {
 				<form
 					className='form'
 					name='contact v1'
-					method='post'
-					data-netlify='true'
-					onSubmit='submit'
+					// method='post'
+					netlify
+					// onSubmit='submit'
 					data-netlify-honeypot='bot-field'
-					data-netlify-recaptcha='true'
 				>
 					<input type='hidden' name='form-name' value='contact v1'></input>
 					<div hidden>
@@ -48,9 +47,6 @@ const Contact = () => {
 								placeholder='Message'
 								rows='6'
 							/>
-						</div>
-						<div className='field'>
-							<div data-netlify-recaptcha='true'></div>
 						</div>
 					</div>
 					<button className='btn btn-primary btn-submit' type='submit'>
