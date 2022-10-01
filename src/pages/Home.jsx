@@ -6,6 +6,7 @@ import Work from '../components/Work/Work';
 import Nav from '../components/Nav/Nav';
 import Contact from '../components/Contact/Contact';
 import About from '../components/About/About';
+
 const Home = () => {
 	return (
 		<>
