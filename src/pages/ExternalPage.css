@@ -1,4 +1,4 @@
-.success__page {
+.external__page {
 	text-align: center;
 	align-items: center;
 	width: 100%;
@@ -8,7 +8,7 @@
 	line-height: 3rem;
 }
 
-.thankyou__container {
+.external__page__container {
 	position: fixed;
 	align-self: center;
 	margin-top: 100vh;
@@ -17,22 +17,22 @@
 	border: 1px solid var(--color-primary);
 }
 
-.thankyou__container a {
+.external__page__container a {
 	display: inline-flex;
 	column-gap: 8px;
 	align-items: center;
 }
 @media screen and (max-width: 1100px) {
-	.thankyou__container {
+	.external__page__container {
 		width: 60%;
 	}
 }
 
 @media screen and (max-width: 540px) {
-	.thankyou__container {
+	.external__page__container {
 		width: 80%;
 	}
-	.thankyou__container {
+	.external__page__container {
 		margin-top: 80vh;
 	}
 }
