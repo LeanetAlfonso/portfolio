@@ -1,0 +1,38 @@
+.success__page {
+	text-align: center;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+	align-content: center;
+	display: flex;
+	line-height: 3rem;
+}
+
+.thankyou__container {
+	position: fixed;
+	align-self: center;
+	margin-top: 100vh;
+	padding: 2rem 1rem;
+	width: 40%;
+	border: 1px solid var(--color-primary);
+}
+
+.thankyou__container a {
+	display: inline-flex;
+	column-gap: 8px;
+	align-items: center;
+}
+@media screen and (max-width: 1100px) {
+	.thankyou__container {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.thankyou__container {
+		width: 80%;
+	}
+	.thankyou__container {
+		margin-top: 80vh;
+	}
+}
