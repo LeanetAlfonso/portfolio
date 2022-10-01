@@ -9,15 +9,13 @@ const Contact = () => {
 				<Caption caption='Get In Touch' icon='contact' />
 				<h3 className='text-light'>Let's work together!</h3>
 				<form
-					className='form'
-					name='contact v1'
-					method='post'
+					name='contact'
+					method='POST'
+					netlify
 					data-netlify='true'
-					onSubmit='submit'
-					data-netlify-honeypot='bot-field'
-					data-netlify-recaptcha='true'
+					netlify-honeypot='bot-field'
 				>
-					<input type='hidden' name='form-name' value='contact v1'></input>
+					<input type='hidden' name='form-name' value='contact' />
 					<div hidden>
 						<input name='bot-field' />
 					</div>
@@ -48,9 +46,6 @@ const Contact = () => {
 								placeholder='Message'
 								rows='6'
 							/>
-						</div>
-						<div className='field'>
-							<div data-netlify-recaptcha='true'></div>
 						</div>
 					</div>
 					<button className='btn btn-primary btn-submit' type='submit'>
