@@ -1,17 +1,17 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import SuccessPage from './pages/SuccessPage';
 import Home from './pages/Home';
 
 const App = () => {
 	return (
 		<>
-			<BrowserRouter>
+			<Router>
 				<Routes>
-					<Route exact path='/' element={<Home />} />
-					<Route exact path='/thank-you' element={<SuccessPage />} />
+					<Route path='/' element={<Home />} />
+					<Route path='/thank-you' element={<SuccessPage />} />
 				</Routes>
-			</BrowserRouter>
+			</Router>
 		</>
 	);
 };
