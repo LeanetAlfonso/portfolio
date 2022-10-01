@@ -1,24 +1,17 @@
 import React from 'react';
-import About from './components/About/About';
-import Tools from './components/Tools/Tools';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Nav from './components/Nav/Nav';
-import Work from './components/Work/Work';
-import Contact from './components/Contact/Contact';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import SuccessPage from './pages/SuccessPage';
+import Home from './pages/Home';
 
 const App = () => {
 	return (
 		<>
-			<Nav />
-			<Header />
-			<div className='main'>
-				<About />
-				<Tools />
-				<Work />
-				<Contact />
-			</div>
-			<Footer />
+			<BrowserRouter>
+				<Routes>
+					<Route exact path='/' element={<Home />} />
+					<Route exact path='/thank-you' element={<SuccessPage />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 };
