@@ -49,12 +49,12 @@ const Contact = () => {
 					id='contact-form'
 					onSubmit={handleSubmit}
 					data-netlify='true'
-					name='contactv1'
+					name='contact'
 					method='POST'
 					action='/thank-you/'
 					netlify-honeypot='bot-field'
 				>
-					<input type='hidden' name='form-name' value='contactv1' />
+					<input type='hidden' name='form-name' value='contact' />
 					<div hidden>
 						<input name='bot-field' value='' readOnly />
 					</div>
