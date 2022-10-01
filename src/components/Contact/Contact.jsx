@@ -9,16 +9,13 @@ const Contact = () => {
 				<Caption caption='Get In Touch' icon='contact' />
 				<h3 className='text-light'>Let's work together!</h3>
 				<form
-					name='contact'
-					method='POST'
-					netlify
 					data-netlify='true'
+					name='contactv1'
+					method='POST'
 					netlify-honeypot='bot-field'
 				>
-					<input type='hidden' name='form-name' value='contact' />
-					<div hidden>
-						<input name='bot-field' />
-					</div>
+					<input type='hidden' name='form-name' value='contactv1' />
+
 					<div className='fields'>
 						<div className='field'>
 							<input
