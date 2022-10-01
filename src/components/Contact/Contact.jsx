@@ -19,7 +19,6 @@ const Contact = () => {
 		setIsSubmitted(true);
 		e.preventDefault();
 	};
-
 	useEffect(() => {
 		if (isSubmitted) {
 			fetch('/', {
@@ -54,6 +53,12 @@ const Contact = () => {
 					action='/thank-you/'
 					netlify-honeypot='bot-field'
 				>
+					<div hidden>
+						<label>
+							Don't fill this out if you're human: <input name='bot-field' />
+						</label>
+					</div>
+
 					<input type='hidden' name='form-name' value='contact' />
 					<div hidden>
 						<input name='bot-field' value='' readOnly />
