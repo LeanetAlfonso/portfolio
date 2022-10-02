@@ -1,6 +1,7 @@
 .project__item {
 	margin-bottom: 8rem;
 	font-weight: 500;
+	overflow-x: hidden;
 }
 
 .work__header {
@@ -162,7 +163,7 @@
 	.project__item__right {
 		width: 75vw;
 		position: absolute;
-		padding: 1.7rem;
+		padding: 6px;
 	}
 	.sub__right {
 		text-align: left;

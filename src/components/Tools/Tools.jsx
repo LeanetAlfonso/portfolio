@@ -1,11 +1,19 @@
 import React from 'react';
 import './Tools.css';
 import Caption from '../Caption/Caption';
+import {useInView} from 'react-intersection-observer';
 
 const Tools = () => {
+	const {ref: toolsRef, inView: toolsInView} = useInView();
+
 	return (
 		<section id='tools'>
-			<div className='container content__container tools__container'>
+			<div
+				ref={toolsRef}
+				className={`container content__container tools__container fade-enter ${
+					toolsInView && 'fade-enter-active'
+				}`}
+			>
 				<Caption caption='Tools' icon='tools' />
 
 				<p className='text-light'>

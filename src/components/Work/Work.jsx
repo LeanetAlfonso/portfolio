@@ -10,7 +10,14 @@ import mastermindGif from '../../assets/mastermind.gif';
 import pemNowImg from '../../assets/pem-now.png';
 import pemNowGif from '../../assets/pem-now.gif';
 import Caption from '../Caption/Caption';
+import {useInView} from 'react-intersection-observer';
+
 const Work = () => {
+	const {ref: sudokuRef, inView: sudokuInView} = useInView();
+	const {ref: geekTextRef, inView: geekTextInView} = useInView();
+	const {ref: mastermindRef, inView: mastermindInView} = useInView();
+	const {ref: pemNowRef, inView: pemNowInView} = useInView();
+
 	const PROJECTS = [
 		{
 			name: 'geek-text',
@@ -43,6 +50,8 @@ const Work = () => {
 			image: geekTextImg,
 			gif: geekTextGif,
 			orientation: 'landscape',
+			reference: geekTextRef,
+			inview: geekTextInView,
 		},
 		{
 			name: 'sudoku',
@@ -65,6 +74,8 @@ const Work = () => {
 			gif: sudokuGif,
 			alignment: 'right',
 			orientation: 'square',
+			reference: sudokuRef,
+			inview: sudokuInView,
 		},
 		{
 			name: 'mastermind',
@@ -85,6 +96,8 @@ const Work = () => {
 			image: mastermindImg,
 			gif: mastermindGif,
 			orientation: 'portrait',
+			reference: mastermindRef,
+			inview: mastermindInView,
 		},
 		{
 			name: 'pem-now',
@@ -104,6 +117,8 @@ const Work = () => {
 			image: pemNowImg,
 			gif: pemNowGif,
 			orientation: 'landscape',
+			reference: pemNowRef,
+			inview: pemNowInView,
 		},
 	];
 
@@ -129,6 +144,8 @@ const Work = () => {
 						alignment={project.alignment}
 						orientation={project.orientation}
 						name={project.name}
+						inview={project.inview}
+						reference={project.reference}
 					/>
 				))}
 			</div>

@@ -2,10 +2,19 @@ import React from 'react';
 import './About.css';
 import CTA from './CTA';
 import Caption from '../Caption/Caption';
+import {useInView} from 'react-intersection-observer';
+
 const About = () => {
+	const {ref: aboutRef, inView: aboutInView} = useInView();
+
 	return (
 		<section id='about'>
-			<div className='container content__container about__container'>
+			<div
+				ref={aboutRef}
+				className={`container content__container about__container fade-enter ${
+					aboutInView && 'fade-enter-active'
+				}`}
+			>
 				<Caption caption='About Me' icon='about' />
 				<h3 className='text-light'>
 					Hi! My name is Leanet and I'm a Full Stack Software Engineer who
@@ -13,7 +22,7 @@ const About = () => {
 					interfaces.
 				</h3>
 				<h3 className='text-light'>
-					I completed my BS in Computer Science at Florida International
+					I received my BS in Computer Science from Florida International
 					University. Since then, I've been working on projects that I have
 					always wanted to build while expanding my skill set.
 				</h3>
