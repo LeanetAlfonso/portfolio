@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Contact.css';
 import Caption from '../Caption/Caption';
 import {useNavigate} from 'react-router-dom';
+import {useInView} from 'react-intersection-observer';
 
 const encode = (data) => {
 	return Object.keys(data)
@@ -17,6 +18,8 @@ const Contact = () => {
 		'bot-field': '',
 	});
 	const [isSubmitted, setIsSubmitted] = useState(false);
+
+	const {ref: contactRef, inView: contactInView} = useInView();
 
 	let navigate = useNavigate();
 
@@ -51,7 +54,12 @@ const Contact = () => {
 
 	return (
 		<section id='contact'>
-			<div className='container content__container about__container contact__container'>
+			<div
+				ref={contactRef}
+				className={`container content__container about__container contact__container fade-enter ${
+					contactInView && 'fade-enter-active'
+				}`}
+			>
 				<Caption caption='Get In Touch' icon='contact' />
 				<h3 className='text-light'>Let's work together!</h3>
 				<form

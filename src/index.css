@@ -18,11 +18,12 @@
 	--color-primary-variant: #e3a58f74;
 	--color-white: rgb(255, 255, 255, 0.8);
 	--color-light: rgba(255, 255, 255, 0.6);
-
 	--container-width-lg: 75%;
 	--container-width-md: 86%;
 	--transition: all 400ms ease;
+	--fade-duration: 500ms;
 	--font-family: 'Montserrat', sans-serif;
+	--easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 html {
@@ -143,6 +144,45 @@ img {
 	font-weight: 500;
 }
 
+/* ============== FADE TRANSITIONS ============== */
+
+/* Fade up */
+.fadeup-enter {
+	opacity: 0.01;
+	transform: translateY(30px);
+	transition: opacity var(--fade-duration) var(--easing),
+		transform var(--fade-duration) var(--easing);
+}
+
+.fadeup-enter-active {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: opacity var(--fade-duration) var(--easing),
+		transform var(--fade-duration) var(--easing);
+}
+
+/* Fade down */
+.fadedown-enter {
+	opacity: 0.01;
+	transform: translateY(-10px);
+	transition: opacity var(--fade-duration) var(--easing),
+		transform var(--fade-duration) var(--easing);
+}
+.fadedown-enter-active {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: opacity var(--fade-duration) var(--easing),
+		transform var(--fade-duration) var(--easing);
+}
+
+/* Fade */
+.fade-enter {
+	opacity: 0;
+}
+.fade-enter-active {
+	opacity: 1;
+	transition: opacity var(--fade-duration) var(--easing);
+}
 /* ================= MEDIA QUERIES ================= */
 
 @media screen and (max-width: 1024px) {

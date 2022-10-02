@@ -16,10 +16,11 @@ const ProjectItem = ({
 	alignment,
 	orientation,
 	name,
+	reference,
+	inview,
 }) => {
 	const [previewSrc, setPreviewSrc] = useState(image);
 	const [previewClass, setPreviewClass] = useState('static');
-
 	const [smallScreen, setSmallScreen] = useState(window.innerWidth < '1240');
 
 	useEffect(() => {
@@ -52,9 +53,10 @@ const ProjectItem = ({
 	return (
 		<div className={`project__item ${alignment === 'right' && 'sub__right'}`}>
 			<div
+				ref={reference}
 				className={`project__item__top subsection ${
 					alignment === 'right' && 'sub__right'
-				}`}
+				}  fadeup-enter ${inview && 'fadeup-enter-active'}`}
 			>
 				{site ? (
 					<a

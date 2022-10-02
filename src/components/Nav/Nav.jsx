@@ -4,9 +4,13 @@ import logo from '../../assets/logo.png';
 import {BiMenuAltRight} from 'react-icons/bi';
 import {AiOutlineClose} from 'react-icons/ai';
 import CV from '../../assets/cv.pdf';
+import {useInView} from 'react-intersection-observer';
 
 const Nav = () => {
 	const [sidebar, setSidebar] = useState(false);
+	const {ref: logoRef, inView: logoInView} = useInView();
+	const {ref: navRef, inView: navInView} = useInView();
+	const {ref: menuRef, inView: menuInView} = useInView();
 
 	const toggleSidebar = () => {
 		setSidebar(!sidebar);
@@ -14,13 +18,23 @@ const Nav = () => {
 
 	return (
 		<nav>
-			<div className='nav__left'>
+			<div
+				ref={logoRef}
+				className={`nav__left fadedown-enter ${
+					logoInView && 'fadedown-enter-active'
+				}`}
+			>
 				<a href='/' aria-label='Home'>
 					<img src={logo} alt='LAA' className='logo' />
 				</a>
 			</div>
 			<div className='nav__right'>
-				<div className='btn__menu'>
+				<div
+					ref={menuRef}
+					className={`btn__menu fadedown-enter ${
+						menuInView && 'fadedown-enter-active'
+					}`}
+				>
 					<BiMenuAltRight onClick={toggleSidebar} />
 				</div>
 				<div className={`${sidebar ? 'side__bar active' : 'side__bar'} `}>
@@ -51,7 +65,12 @@ const Nav = () => {
 					</a>
 				</div>
 
-				<div className='menu__items'>
+				<div
+					ref={navRef}
+					className={`menu__items fadedown-enter ${
+						navInView && 'fadedown-enter-active'
+					}`}
+				>
 					<a aria-label='About' href='#about'>
 						About
 					</a>
