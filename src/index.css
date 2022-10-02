@@ -148,6 +148,7 @@ img {
 
 /* Fade up */
 .fadeup-enter {
+	overflow: hidden;
 	opacity: 0.01;
 	transform: translateY(30px);
 	transition: opacity var(--fade-duration) var(--easing),
@@ -155,6 +156,7 @@ img {
 }
 
 .fadeup-enter-active {
+	overflow: hidden;
 	opacity: 1;
 	transform: translateY(0px);
 	transition: opacity var(--fade-duration) var(--easing),
@@ -163,12 +165,14 @@ img {
 
 /* Fade down */
 .fadedown-enter {
+	overflow: hidden;
 	opacity: 0.01;
 	transform: translateY(-10px);
 	transition: opacity var(--fade-duration) var(--easing),
 		transform var(--fade-duration) var(--easing);
 }
 .fadedown-enter-active {
+	overflow: hidden;
 	opacity: 1;
 	transform: translateY(0px);
 	transition: opacity var(--fade-duration) var(--easing),
@@ -177,9 +181,11 @@ img {
 
 /* Fade */
 .fade-enter {
+	overflow: hidden;
 	opacity: 0;
 }
 .fade-enter-active {
+	overflow: hidden;
 	opacity: 1;
 	transition: opacity var(--fade-duration) var(--easing);
 }
