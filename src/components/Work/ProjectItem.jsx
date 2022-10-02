@@ -56,7 +56,7 @@ const ProjectItem = ({
 				ref={reference}
 				className={`project__item__top subsection ${
 					alignment === 'right' && 'sub__right'
-				}  fadeup-enter ${inview && 'fadeup-enter-active'}`}
+				}  fade-enter ${inview && 'fade-enter-active'}`}
 			>
 				{site ? (
 					<a
