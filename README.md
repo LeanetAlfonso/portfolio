@@ -5,7 +5,7 @@
   leanetalfonso.com
 </h1>
 <p align="center">
-  The first iteration of <a href="https://leanetalfonso.com" target="_blank">leanetalfonso.com</a> built with <a href="https://reactjs.org/ " target="_blank">React</a> and hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  This is my personal portfolio <a href="https://leanetalfonso.com" target="_blank">leanetalfonso.com</a> built with <a href="https://reactjs.org/ " target="_blank">React</a> and hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ Install dependencies
 npm install
 ```
 
-Run
+Run locally
 
 ```
 npm start
