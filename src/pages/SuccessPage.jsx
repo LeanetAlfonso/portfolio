@@ -1,18 +1,12 @@
 import React from 'react';
-import './ExternalPage.css';
-import {BiArrowBack} from 'react-icons/bi';
+import Message from '../components/Message/Message';
+
 const SuccessPage = () => {
 	return (
-		<div className='external__page'>
-			<div className='external__page__container'>
-				<h2>Thank you!</h2>
-				<h3 className='text-light'>Your message was sent.</h3>
-				<a href='/' aria-label='Go Back'>
-					<BiArrowBack />
-					Go back
-				</a>
-			</div>
-		</div>
+		<Message
+			messageHeader='Thank you!'
+			messageContent='Your message was sent.'
+		/>
 	);
 };
 
