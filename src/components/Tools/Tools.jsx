@@ -5,6 +5,24 @@ import {useInView} from 'react-intersection-observer';
 
 const Tools = () => {
 	const {ref: toolsRef, inView: toolsInView} = useInView();
+	const TOOLS = {
+		backend: [
+			'NodeJS',
+			'ExpressJS',
+			'MongoDB',
+			'Firebase',
+			'PostgreSQL',
+			'Java',
+		],
+		frontend: [
+			'ReactJS (ES6)',
+			'Redux',
+			'HTML',
+			'CSS/Sass',
+			'React Testing Library',
+		],
+		other: ['Git', 'VSCode', 'Xcode', 'Netlify', 'Heroku'],
+	};
 
 	return (
 		<section id='tools'>
@@ -15,33 +33,27 @@ const Tools = () => {
 				}`}
 			>
 				<Caption caption='Tools' icon='tools' />
-
 				<p className='text-light'>
-					Here are a few tools I've been working with recently:
+					Here are a few tools I've been working with:
 				</p>
 				<div className='tools__list'>
 					<div className='column'>
 						<p className='row text-primary'>Back-End Technology</p>
-						<p>NodeJS</p>
-						<p>ExpressJS</p>
-						<p>MongoDB</p>
-						<p>Firebase</p>
-						<p>Java</p>
-						<p>PostgreSQL</p>
+						{TOOLS.backend.map((tool) => (
+							<p key={tool}>{tool}</p>
+						))}
 					</div>
 					<div className='column'>
 						<p className='row text-primary'>Front-End Technology</p>
-						<p>ReactJS</p>
-						<p>Redux</p>
-						<p>HTML</p>
-						<p>CSS</p>
-						<p>React Testing Library</p>
+						{TOOLS.frontend.map((tool) => (
+							<p key={tool}>{tool}</p>
+						))}
 					</div>
 					<div className='column'>
 						<p className='row text-primary'>Other Tools</p>
-						<p>Git</p>
-						<p>VSCode</p>
-						<p>Xcode</p>
+						{TOOLS.other.map((tool) => (
+							<p key={tool}>{tool}</p>
+						))}
 					</div>
 				</div>
 			</div>

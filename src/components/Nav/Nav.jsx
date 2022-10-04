@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './Nav.css';
 import logo from '../../assets/logo.png';
+import CV from '../../assets/cv.pdf';
 import {BiMenuAltRight} from 'react-icons/bi';
 import {AiOutlineClose} from 'react-icons/ai';
-import CV from '../../assets/cv.pdf';
 import {useInView} from 'react-intersection-observer';
 
 const Nav = () => {

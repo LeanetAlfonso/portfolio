@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {BiLinkExternal} from 'react-icons/bi';
 import {FiGithub} from 'react-icons/fi';
 import {AiOutlineYoutube} from 'react-icons/ai';

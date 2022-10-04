@@ -1,10 +1,9 @@
 import React from 'react';
+import './Caption.css';
 import {FiUser} from 'react-icons/fi';
 import {BsLightningCharge} from 'react-icons/bs';
 import {RiSpaceShipLine} from 'react-icons/ri';
 import {TiContacts} from 'react-icons/ti';
-
-import './Caption.css';
 
 const Caption = ({caption, className, icon}) => {
 	const ICONS = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import FooterSocials from './FooterSocials';
+
 const Footer = () => {
 	return (
 		<div className='footer'>

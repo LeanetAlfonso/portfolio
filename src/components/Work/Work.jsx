@@ -1,5 +1,4 @@
 import React from 'react';
-import ProjectItem from './ProjectItem';
 import './Work.css';
 import geekTextImg from '../../assets/geek-text.png';
 import geekTextGif from '../../assets/geek-text.gif';
@@ -10,6 +9,7 @@ import mastermindGif from '../../assets/mastermind.gif';
 import pemNowImg from '../../assets/pem-now.png';
 import pemNowGif from '../../assets/pem-now.gif';
 import Caption from '../Caption/Caption';
+import ProjectItem from './ProjectItem';
 import {useInView} from 'react-intersection-observer';
 
 const Work = () => {
@@ -60,10 +60,10 @@ const Work = () => {
 			description: (
 				<div className='text-light'>
 					<p>
-						A sudoku app built in React that generates puzzles of different
-						difficulties. Includes timer, auto-check, and "challenge your
-						friend" features, dark mode support, multiple-language support, and
-						a solver implemented using a recursive backtracking algorithm.
+						A sudoku app that generates puzzles of different difficulties.
+						Includes timer, auto-check, and "challenge your friend" features,
+						dark mode support, multiple-language support, and a solver
+						implemented using a recursive backtracking algorithm.
 					</p>
 				</div>
 			),
@@ -85,9 +85,10 @@ const Work = () => {
 				<div className='text-light'>
 					<p>
 						A code-breaking game whose objective is to guess the secret code in
-						the fewest tries possible. I built this to learn some mobile
-						development concepts and implement an algorithm to provide feedback
-						on every guess in constant time.
+						the fewest tries possible. I built this to learn about native mobile
+						development after being exposed to cross platform (React Native) and
+						wanted to implement an algorithm to provide feedback on every guess
+						in constant time.
 					</p>
 				</div>
 			),
