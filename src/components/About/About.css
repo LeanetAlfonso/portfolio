@@ -7,15 +7,16 @@
 	line-height: 2rem;
 	padding: 1rem 0rem;
 }
-/* ============== CTA ============== */
 
-.cta {
+.about_buttons {
 	margin-top: 2.5rem;
 	margin-bottom: 2rem;
 	display: flex;
 	gap: 1.2rem;
 	justify-content: left;
 }
+
+/* ============== MEDIA QUERIES ============== */
 
 @media screen and (max-width: 1024px) {
 	.about__container {
@@ -38,7 +39,7 @@
 }
 
 @media screen and (max-width: 350px) {
-	.cta {
+	.about_buttons {
 		flex-direction: column;
 	}
 }
