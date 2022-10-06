@@ -16,6 +16,13 @@ const Nav = () => {
 		setSidebar(!sidebar);
 	};
 
+	const NAV_ITEMS = [
+		{title: 'About', link: '#about'},
+		{title: 'Tools', link: '#tools'},
+		{title: 'Work', link: '#work'},
+		{title: 'Contact', link: '#contact'},
+	];
+
 	return (
 		<nav>
 			<div
@@ -41,39 +48,24 @@ const Nav = () => {
 					<div className='btn__close__bar' onClick={toggleSidebar}>
 						<AiOutlineClose />
 					</div>
-					<a aria-label='About' href='#about' onClick={toggleSidebar}>
-						About
-					</a>
-					<a aria-label='Tools' href='#tools' onClick={toggleSidebar}>
-						Tools
-					</a>
-					<a aria-label='Work' href='#work' onClick={toggleSidebar}>
-						Work
-					</a>
-					<a aria-label='Contact' href='#contact' onClick={toggleSidebar}>
-						Contact
-					</a>
+					{NAV_ITEMS.map((item) => (
+						<a key={item.title} href={item.link} onClick={toggleSidebar}>
+							{item.title}
+						</a>
+					))}
 					<ResumeButton />
 				</div>
-
 				<div
 					ref={navRef}
 					className={`menu__items fadedown-enter ${
 						navInView && 'fadedown-enter-active'
 					}`}
 				>
-					<a aria-label='About' href='#about'>
-						About
-					</a>
-					<a aria-label='Tools' href='#tools'>
-						Tools
-					</a>
-					<a aria-label='Work' href='#work'>
-						Work
-					</a>
-					<a aria-label='Contact' href='#contact'>
-						Contact
-					</a>
+					{NAV_ITEMS.map((item) => (
+						<a key={item.title} aria-label={item.title} href={item.link}>
+							{item.title}
+						</a>
+					))}
 					<ResumeButton />
 				</div>
 			</div>
