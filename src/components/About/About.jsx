@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import CTA from './CTA';
+import AboutButtons from './AboutButtons';
 import Caption from '../Caption/Caption';
 import {useInView} from 'react-intersection-observer';
 
@@ -30,7 +30,7 @@ const About = () => {
 					When I am not coding, I enjoy playing board games. I also have a
 					passion for music and have been playing the oboe since I was 9.
 				</h3>
-				<CTA />
+				<AboutButtons />
 			</div>
 		</section>
 	);

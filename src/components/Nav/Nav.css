@@ -30,7 +30,6 @@ nav {
 	-webkit-backdrop-filter: blur(8px);
 	backdrop-filter: blur(8px);
 	display: none;
-	/* transform: translateX(100vw); */
 	transform: translateX(100%);
 }
 
@@ -101,5 +100,26 @@ nav img:hover {
 	}
 	.side__bar.active {
 		transform: translateX(0);
+	}
+}
+
+@media screen and (max-height: 660px) {
+	.side__bar a,
+	.side__bar .btn__close__bar {
+		margin: 1rem;
+	}
+}
+
+@media screen and (max-height: 470px) {
+	.side__bar a,
+	.side__bar .btn__close__bar {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-height: 390px) {
+	.side__bar a,
+	.side__bar .btn__close__bar {
+		margin: 4px;
 	}
 }
