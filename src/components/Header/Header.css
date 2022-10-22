@@ -74,3 +74,9 @@ header {
 		display: none;
 	}
 }
+
+@media screen and (max-height: 380px) {
+	.scroll__down {
+		display: none;
+	}
+}
