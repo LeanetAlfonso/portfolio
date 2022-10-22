@@ -2,7 +2,7 @@
 	padding-top: 3rem;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-between;
 	column-gap: 10rem;
 	row-gap: 2rem;
 	line-height: 3rem;
@@ -13,6 +13,9 @@
 }
 .tools__container p {
 	font-weight: 500;
+}
+.tools__container {
+	max-width: 50rem;
 }
 
 @media screen and (max-width: 950px) {

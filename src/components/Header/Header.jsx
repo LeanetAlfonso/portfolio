@@ -8,12 +8,10 @@ const Header = () => {
 
 	return (
 		<section className='full__page'>
-			<div className='header__container'>
+			<div className='header__container container'>
 				<div
 					ref={headerRef}
-					className={`container fadeup-enter ${
-						headerInView && 'fadeup-enter-active'
-					}`}
+					className={`fadeup-enter ${headerInView && 'fadeup-enter-active'}`}
 				>
 					<h2 className='text-primary big-sub-heading'>Hello, I'm</h2>
 					<h1

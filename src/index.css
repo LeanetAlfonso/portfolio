@@ -50,11 +50,11 @@ button {
 }
 
 .big-heading {
-	font-size: clamp(30px, 8vw, 60px);
+	font-size: clamp(40px, 8vw, 60px);
 }
 
 .big-sub-heading {
-	font-size: clamp(20px, 5vw, 35px);
+	font-size: clamp(25px, 5vw, 35px);
 }
 
 .small-text {
@@ -62,6 +62,7 @@ button {
 }
 
 .container {
+	max-width: 65rem;
 	width: var(--container-width-lg);
 	margin: 0 auto;
 	padding-top: 6rem;

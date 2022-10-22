@@ -1,13 +1,18 @@
 header {
-	/* height: 100vh; */
-	overflow: hidden;
+	height: 100vh;
+	overflow: visible;
 }
 .header__container {
+	margin-top: 100px !important;
 	text-align: left;
-	height: 100%;
 	position: relative;
-	padding-top: 6rem;
+	height: calc(100vh - 500px);
+	flex-direction: column;
+	-moz-box-pack: center;
+	justify-content: center;
+	display: flex;
 }
+
 .header__container .big-heading {
 	margin: 1rem 0rem;
 }
@@ -67,9 +72,15 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-	header {
+	/* header {
 		height: 100vh;
+	} */
+	.scroll__down {
+		display: none;
 	}
+}
+
+@media screen and (max-height: 380px) {
 	.scroll__down {
 		display: none;
 	}

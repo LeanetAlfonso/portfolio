@@ -4,7 +4,8 @@ nav {
 	display: flex;
 	align-items: center;
 	background: var(--color-background);
-	padding: 30px 60px;
+	padding: 0px 60px;
+	height: 90px;
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
