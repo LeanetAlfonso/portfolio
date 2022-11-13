@@ -22,6 +22,7 @@
 	--container-width-md: 86%;
 	--transition: all 400ms ease;
 	--fade-duration: 500ms;
+	--horizontal-fade-duration: 1s;
 	--font-family: 'Montserrat', sans-serif;
 	--easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -147,6 +148,15 @@ img {
 
 /* ============== FADE TRANSITIONS ============== */
 
+/* Fade */
+.fade-enter {
+	opacity: 0;
+}
+.fade-enter-active {
+	opacity: 1;
+	transition: opacity var(--fade-duration) var(--easing);
+}
+
 /* Fade up */
 .fadeup-enter {
 	opacity: 0.01;
@@ -154,7 +164,6 @@ img {
 	transition: opacity var(--fade-duration) var(--easing),
 		transform var(--fade-duration) var(--easing);
 }
-
 .fadeup-enter-active {
 	opacity: 1;
 	transform: translateY(0px);
@@ -176,16 +185,53 @@ img {
 		transform var(--fade-duration) var(--easing);
 }
 
-/* Fade */
-.fade-enter {
-	opacity: 0;
+/* Fade left */
+.fadeleft-enter {
+	opacity: 0.01;
+	transform: translateX(-40px);
+	transition: opacity var(--horizontal-fade-duration) var(--easing),
+		transform var(--horizontal-fade-duration) var(--easing);
 }
-.fade-enter-active {
+.fadeleft-enter-active {
 	opacity: 1;
-	transition: opacity var(--fade-duration) var(--easing);
+	transform: translateX(0px);
+	transition: opacity var(--horizontal-fade-duration) var(--easing),
+		transform var(--horizontal-fade-duration) var(--easing);
 }
+
+/* Fade right */
+.faderight-enter {
+	opacity: 0.01;
+	transform: translateX(40px);
+	transition: opacity var(--horizontal-fade-duration) var(--easing),
+		transform var(--horizontal-fade-duration) var(--easing);
+}
+.faderight-enter-active {
+	opacity: 1;
+	transform: translateX(0px);
+	transition: opacity var(--horizontal-fade-duration) var(--easing),
+		transform var(--horizontal-fade-duration) var(--easing);
+}
+
 /* ================= MEDIA QUERIES ================= */
 
+@media screen and (max-width: 1200px) {
+	/* Fade up */
+	.fadeleft-enter,
+	.faderight-enter {
+		opacity: 0.01;
+		transform: translateY(30px);
+		transition: opacity var(--fade-duration) var(--easing),
+			transform var(--fade-duration) var(--easing);
+	}
+	.fadeleft-enter-active,
+	.faderight-enter-active {
+		opacity: 1;
+		transform: translateY(0px);
+		transition: opacity var(--fade-duration) var(--easing),
+			transform var(--fade-duration) var(--easing);
+	}
+}
 @media screen and (max-width: 1024px) {
 	.container {
 		width: var(--container-width-md);
