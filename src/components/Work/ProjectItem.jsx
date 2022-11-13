@@ -53,9 +53,11 @@ const ProjectItem = ({
 		<div className={`project__item ${alignment === 'right' && 'sub__right'}`}>
 			<div
 				ref={reference}
-				className={`project__item__top subsection ${
-					alignment === 'right' && 'sub__right'
-				}  fade-enter ${inview && 'fade-enter-active'}`}
+				className={`project__item__top subsection
+					${alignment === 'right' ? 'fadeleft-enter sub__right' : 'faderight-enter'}
+					${inview && alignment === 'right' && 'fadeleft-enter-active'}
+					${inview && alignment !== 'right' && 'faderight-enter-active'}
+				`}
 			>
 				{site ? (
 					<a
@@ -116,14 +118,25 @@ const ProjectItem = ({
 					<div className='subsection'>
 						<div className='flex__container stack'>
 							{technologies.map((tech) => (
-								<div key={tech} className='stack__item flex__container__link'>
+								<div
+									key={tech}
+									className={`stack__item flex__container__link ${
+										alignment === 'right'
+											? 'stack__item__right'
+											: 'stack__item__left'
+									} `}
+								>
 									{tech}
 								</div>
 							))}
 						</div>
 					</div>
 
-					<div className='flex__links flex__container'>
+					<div
+						className={`flex__container flex__links ${
+							alignment === 'right' ? 'flex__links__right' : 'flex__links__left'
+						} `}
+					>
 						{site && (
 							<a
 								aria-label='Visit site'
