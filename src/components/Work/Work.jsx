@@ -28,7 +28,7 @@ const Work = () => {
 				'NODE',
 				'EXPRESS',
 				'MONGODB',
-				'HEROKU',
+				'RAILWAY',
 				'NETLIFY',
 			],
 			description: (
@@ -38,7 +38,7 @@ const Work = () => {
 						for CEN 4010 Software Engineering.
 					</p>
 					<p>
-						The back-end is hosted on a Heroku free-tier and may take a few
+						The back-end is hosted on a Railway free-tier and may take a few
 						seconds to load!
 					</p>
 				</div>
@@ -55,7 +55,7 @@ const Work = () => {
 		},
 		{
 			name: 'sudoku',
-			title: 'Sudoku App',
+			title: 'Sudoku',
 			technologies: ['REACT', 'MATERIAL UI', 'i18next', 'NETLIFY'],
 			description: (
 				<div className='text-light'>
