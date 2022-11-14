@@ -12,7 +12,9 @@ const ResumeButton = () => {
                 className='btn'
                 myfilename='leanet-alfonso-azcona-resume.pdf'
             >
-                <BsDownload />
+                <div className='resume-icon'>
+                    <BsDownload />
+                </div>
                 Resume
             </a>
         </div>

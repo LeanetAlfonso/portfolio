@@ -14,7 +14,9 @@ const Message = ({messageHeader, messageContent, error}) => {
 					</div>
 				)}
 				<a href='/' aria-label='Go Back'>
-					<BiArrowBack />
+					<div className='go__back'>
+						<BiArrowBack />
+					</div>
 					Go back
 				</a>
 			</div>

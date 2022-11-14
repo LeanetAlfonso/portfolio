@@ -54,7 +54,11 @@ const ProjectItem = ({
 			<div
 				ref={reference}
 				className={`project__item__top subsection
-					${alignment === 'right' ? 'fadeleft-enter sub__right' : 'faderight-enter'}
+					${
+						alignment === 'right'
+							? 'fadeleft-enter sub__right'
+							: 'faderight-enter sub__left'
+					}
 					${inview && alignment === 'right' && 'fadeleft-enter-active'}
 					${inview && alignment !== 'right' && 'faderight-enter-active'}
 				`}
