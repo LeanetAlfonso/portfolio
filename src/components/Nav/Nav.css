@@ -23,7 +23,6 @@ nav {
 	bottom: 0;
 	right: 0;
 	background-color: var(--color-background-variant);
-	column-gap: 3rem;
 	transition: var(--transition);
 	align-items: flex-end;
 	z-index: 5;

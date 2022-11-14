@@ -44,7 +44,7 @@ const Nav = () => {
 				>
 					<BiMenuAltRight onClick={toggleSidebar} />
 				</div>
-				<div className={`${sidebar ? 'side__bar active' : 'side__bar'} `}>
+				<div className={`side__bar ${sidebar && 'active'}`}>
 					<div className='btn__close__bar' onClick={toggleSidebar}>
 						<AiOutlineClose />
 					</div>

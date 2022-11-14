@@ -17,7 +17,7 @@ const Tools = () => {
 		frontend: [
 			'ReactJS (ES6)',
 			'Redux',
-			'HTML',
+			'HTML5',
 			'CSS/Sass',
 			'React Testing Library',
 		],

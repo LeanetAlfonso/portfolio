@@ -3,10 +3,12 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	column-gap: 10rem;
-	row-gap: 2rem;
-	line-height: 3rem;
+	line-height: 2.6rem;
 	flex-wrap: wrap;
+}
+.column {
+	margin-bottom: 2rem;
+	margin-right: 2rem;
 }
 .row.text-primary {
 	font-weight: 700;
@@ -16,12 +18,6 @@
 }
 .tools__container {
 	max-width: 50rem;
-}
-
-@media screen and (max-width: 950px) {
-	.tools__list {
-		column-gap: 5rem;
-	}
 }
 
 @media screen and (max-width: 600px) {

@@ -20,8 +20,12 @@
 
 .message__container a {
 	display: inline-flex;
-	column-gap: 8px;
 	align-items: center;
+}
+
+.go__back {
+	display: flex;
+	margin-right: 8px;
 }
 
 @keyframes shake {
