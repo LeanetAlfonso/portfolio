@@ -25,48 +25,50 @@ const Nav = () => {
 
 	return (
 		<nav>
-			<div
-				ref={logoRef}
-				className={`nav__left fadedown-enter ${
-					logoInView && 'fadedown-enter-active'
-				}`}
-			>
-				<a href='/' aria-label='Home'>
-					<img src={logo} alt='LAA' className='logo' />
-				</a>
-			</div>
-			<div className='nav__right'>
+			<div className='nav__content'>
 				<div
-					ref={menuRef}
-					className={`btn__menu fadedown-enter ${
-						menuInView && 'fadedown-enter-active'
+					ref={logoRef}
+					className={`nav__left fadedown-enter ${
+						logoInView && 'fadedown-enter-active'
 					}`}
 				>
-					<BiMenuAltRight onClick={toggleSidebar} />
+					<a href='/' aria-label='Home'>
+						<img src={logo} alt='LAA' className='logo' />
+					</a>
 				</div>
-				<div className={`side__bar ${sidebar && 'active'}`}>
-					<div className='btn__close__bar' onClick={toggleSidebar}>
-						<AiOutlineClose />
+				<div className='nav__right'>
+					<div
+						ref={menuRef}
+						className={`btn__menu fadedown-enter ${
+							menuInView && 'fadedown-enter-active'
+						}`}
+					>
+						<BiMenuAltRight onClick={toggleSidebar} />
 					</div>
-					{NAV_ITEMS.map((item) => (
-						<a key={item.title} href={item.link} onClick={toggleSidebar}>
-							{item.title}
-						</a>
-					))}
-					<ResumeButton />
-				</div>
-				<div
-					ref={navRef}
-					className={`menu__items fadedown-enter ${
-						navInView && 'fadedown-enter-active'
-					}`}
-				>
-					{NAV_ITEMS.map((item) => (
-						<a key={item.title} aria-label={item.title} href={item.link}>
-							{item.title}
-						</a>
-					))}
-					<ResumeButton />
+					<div className={`side__bar ${sidebar && 'active'}`}>
+						<div className='btn__close__bar' onClick={toggleSidebar}>
+							<AiOutlineClose />
+						</div>
+						{NAV_ITEMS.map((item) => (
+							<a key={item.title} href={item.link} onClick={toggleSidebar}>
+								{item.title}
+							</a>
+						))}
+						<ResumeButton />
+					</div>
+					<div
+						ref={navRef}
+						className={`menu__items fadedown-enter ${
+							navInView && 'fadedown-enter-active'
+						}`}
+					>
+						{NAV_ITEMS.map((item) => (
+							<a key={item.title} aria-label={item.title} href={item.link}>
+								{item.title}
+							</a>
+						))}
+						<ResumeButton />
+					</div>
 				</div>
 			</div>
 		</nav>
