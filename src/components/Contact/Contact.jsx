@@ -83,7 +83,7 @@ const Contact = () => {
 					<div className='fields'>
 						<div className='field'>
 							<input
-								title='your name'
+								title='name'
 								type='text'
 								name='name'
 								id='name'
@@ -95,7 +95,7 @@ const Contact = () => {
 						</div>
 						<div className='field'>
 							<input
-								title='your email'
+								title='email'
 								type='email'
 								name='email'
 								id='email'
@@ -107,7 +107,7 @@ const Contact = () => {
 						</div>
 						<div className='field'>
 							<textarea
-								title='your message'
+								title='message'
 								name='message'
 								id='message'
 								placeholder='Message *'

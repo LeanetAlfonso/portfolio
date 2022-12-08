@@ -31,7 +31,7 @@ header {
 	align-items: center;
 	writing-mode: vertical-rl;
 	text-orientation: mixed;
-	right: 50px;
+	right: 48px;
 	bottom: 0;
 	-webkit-animation: mover 1s infinite alternate;
 	animation: mover 1s infinite alternate;
@@ -71,10 +71,18 @@ header {
 	}
 }
 
+@media screen and (max-width: 1024px) {
+	.scroll__down {
+		right: 5.7%;
+	}
+}
+@media screen and (max-width: 800px) {
+	.scroll__down {
+		right: 5%;
+	}
+}
+
 @media screen and (max-width: 600px) {
-	/* header {
-		height: 100vh;
-	} */
 	.scroll__down {
 		display: none;
 	}

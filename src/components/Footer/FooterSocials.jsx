@@ -8,7 +8,6 @@ const FooterSocials = () => {
 		<div className='footer__socials'>
 			<IconContext.Provider value={{size: 20}}>
 				<a
-					className='github'
 					aria-label='GitHub'
 					href='https://github.com/LeanetAlfonso'
 					target='_blank'
