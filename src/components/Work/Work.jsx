@@ -21,7 +21,7 @@ const Work = () => {
 	const PROJECTS = [
 		{
 			name: 'geek-text',
-			title: 'Geek Text',
+			title: 'Geek Text Bookstore',
 			technologies: [
 				'REACT',
 				'REDUX',
@@ -55,15 +55,15 @@ const Work = () => {
 		},
 		{
 			name: 'sudoku',
-			title: 'Sudoku',
+			title: 'Sudoku Web App',
 			technologies: ['REACT', 'MATERIAL UI', 'i18next', 'NETLIFY'],
 			description: (
 				<div className='text-light'>
 					<p>
 						A sudoku app that generates puzzles of different difficulties.
-						Includes timer, auto-check, and "challenge your friend" features,
-						dark mode support, multiple-language support, and a solver
-						implemented using a recursive backtracking algorithm.
+						Includes timer, custom keyboard, auto-check, and "challenge your
+						friend" features, dark mode support, multiple-language support, and
+						a solver implemented using a recursive backtracking algorithm.
 					</p>
 				</div>
 			),
@@ -79,7 +79,7 @@ const Work = () => {
 		},
 		{
 			name: 'mastermind',
-			title: 'Mastermind',
+			title: 'Mastermind iOS App',
 			technologies: ['SWIFT', 'SWIFTUI', 'XCODE', 'EXPO'],
 			description: (
 				<div className='text-light'>
@@ -102,7 +102,7 @@ const Work = () => {
 		},
 		{
 			name: 'pem-now',
-			title: 'PEM-NOW',
+			title: 'PEM-NOW Web App',
 			technologies: ['REACT', 'REDUX', 'NODE', 'FIREBASE', 'HEROKU', 'NETLIFY'],
 			description: (
 				<div className='text-light'>

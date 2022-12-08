@@ -5,7 +5,7 @@
 	color: var(--color-light);
 	bottom: 0;
 	position: relative;
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 .footer__socials {
@@ -16,10 +16,8 @@
 	text-align: center;
 }
 
-.github {
-	margin-right: 1rem;
-}
-
 .footer__socials a {
+	padding: 5px;
+	margin: 10px;
 	color: var(--color-light);
 }

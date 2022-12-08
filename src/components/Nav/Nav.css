@@ -3,13 +3,22 @@ nav {
 	z-index: 1000;
 	display: flex;
 	align-items: center;
-	background: var(--color-background);
-	padding: 0px 60px;
 	height: 90px;
+	background: var(--color-background);
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.nav__content {
+	display: flex;
+	text-align: center;
+	position: absolute;
+	position: absolute;
+	margin: auto;
 	justify-content: space-between;
 	align-items: center;
-	position: fixed;
 	width: 100%;
+	padding: 0px 60px;
 }
 .side__bar {
 	display: flex;
@@ -44,6 +53,7 @@ nav {
 	font-size: 35px;
 }
 .btn__menu {
+	margin-right: -7.5px; /* justify right*/
 	font-size: 45px;
 }
 .btn__close__bar {
@@ -89,10 +99,14 @@ nav img:hover {
 		contrast(80%); /* change color to white */
 }
 
-@media screen and (max-width: 700px) {
-	nav {
-		padding: 30px 30px;
+@media screen and (max-width: 1024px) {
+	.nav__content {
+		width: var(--container-width-md);
+		padding: 0px;
 	}
+}
+
+@media screen and (max-width: 700px) {
 	.btn__menu,
 	.side__bar,
 	.btn__close__bar {
