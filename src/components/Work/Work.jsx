@@ -67,7 +67,7 @@ const Work = () => {
 					</p>
 				</div>
 			),
-			site: 'https://sudokupuzzle.ga/',
+			site: 'https://sudokupuzzless.com/',
 			repo: 'https://github.com/LeanetAlfonso/sudoku',
 			demo: 'https://youtu.be/UO1kxmKNN2M',
 			image: sudokuImg,
