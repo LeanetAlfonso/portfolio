@@ -56,20 +56,20 @@ const Work = () => {
 		{
 			name: 'sudoku',
 			title: 'Sudoku Web App',
-			technologies: ['REACT', 'MATERIAL UI', 'i18next', 'NETLIFY'],
+			technologies: ['REACT', 'MATERIAL UI', 'NETLIFY', 'FIREBASE'],
 			description: (
 				<div className='text-light'>
 					<p>
-						A sudoku app that generates puzzles of different difficulties.
-						Includes timer, custom keyboard, auto-check, and "challenge your
-						friend" features, dark mode support, multiple-language support, and
-						a solver implemented using a recursive backtracking algorithm.
+						An app that generates sudoku puzzles of different difficulties.
+						Includes timer, leaderboard, keyboard, auto-check, and "challenge
+						your friend" features, multiple-language support, and a solver
+						implemented using a recursive backtracking algorithm.
 					</p>
 				</div>
 			),
 			site: 'https://sudokupuzzless.com/',
 			repo: 'https://github.com/LeanetAlfonso/sudoku',
-			demo: 'https://youtu.be/UO1kxmKNN2M',
+			demo: 'https://youtu.be/zp54OZgIPp8',
 			image: sudokuImg,
 			gif: sudokuGif,
 			alignment: 'right',
