@@ -12,6 +12,8 @@ const Nav = () => {
 	const {ref: navRef, inView: navInView} = useInView();
 	const {ref: menuRef, inView: menuInView} = useInView();
 
+	const showResumeButton = false;
+
 	const toggleSidebar = () => {
 		setSidebar(!sidebar);
 	};
@@ -54,7 +56,7 @@ const Nav = () => {
 								{item.title}
 							</a>
 						))}
-						<ResumeButton />
+						{showResumeButton && <ResumeButton />}
 					</div>
 					<div
 						ref={navRef}
@@ -67,7 +69,7 @@ const Nav = () => {
 								{item.title}
 							</a>
 						))}
-						<ResumeButton />
+						{showResumeButton && <ResumeButton />}
 					</div>
 				</div>
 			</div>
