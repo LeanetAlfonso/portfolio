@@ -6,8 +6,6 @@ import sudokuImg from '../../assets/sudoku.png';
 import sudokuGif from '../../assets/sudoku.gif';
 import mastermindImg from '../../assets/mastermind.png';
 import mastermindGif from '../../assets/mastermind.gif';
-import pemNowImg from '../../assets/pem-now.png';
-import pemNowGif from '../../assets/pem-now.gif';
 import Caption from '../Caption/Caption';
 import ProjectItem from './ProjectItem';
 import {useInView} from 'react-intersection-observer';
@@ -16,7 +14,6 @@ const Work = () => {
 	const {ref: sudokuRef, inView: sudokuInView} = useInView();
 	const {ref: geekTextRef, inView: geekTextInView} = useInView();
 	const {ref: mastermindRef, inView: mastermindInView} = useInView();
-	const {ref: pemNowRef, inView: pemNowInView} = useInView();
 
 	const PROJECTS = [
 		{
@@ -99,27 +96,6 @@ const Work = () => {
 			orientation: 'portrait',
 			reference: mastermindRef,
 			inview: mastermindInView,
-		},
-		{
-			name: 'pem-now',
-			title: 'PEM-NOW Web App',
-			technologies: ['REACT', 'REDUX', 'NODE', 'FIREBASE', 'HEROKU', 'NETLIFY'],
-			description: (
-				<div className='text-light'>
-					<p>
-						A full-stack pediatric emergency medicine web application that
-						provides health workers easy data access and manipulation about
-						common pediatric emergencies built for Capstone II.
-					</p>
-				</div>
-			),
-			demo: 'https://www.youtube.com/watch?v=Kk_Ug3Loj8c',
-			alignment: 'right',
-			image: pemNowImg,
-			gif: pemNowGif,
-			orientation: 'landscape',
-			reference: pemNowRef,
-			inview: pemNowInView,
 		},
 	];
 
