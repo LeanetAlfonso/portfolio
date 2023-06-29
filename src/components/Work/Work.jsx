@@ -40,7 +40,7 @@ const Work = () => {
 					</p>
 				</div>
 			),
-			site: 'https://geek-text.ga/',
+			site: 'https://geektext.netlify.app/',
 			repo: 'https://github.com/LeanetAlfonso/geek-text-frontend',
 			demo: 'https://www.youtube.com/watch?v=2v4gouzU3YQ',
 
