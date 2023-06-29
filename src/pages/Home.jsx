@@ -13,7 +13,7 @@ const Home = () => {
 			<Nav />
 			<Header />
 			<div className='main'>
-				<About />
+				<!-- <About /> -->
 				<Tools />
 				<Work />
 				<Contact />
