@@ -26,7 +26,7 @@ const Header = () => {
 							headerInView && 'fadeup-enter-active'
 						}`}
 					>
-						I am a Full Stack Software Engineer.
+						I am a Software Engineer.
 					</h2>
 				</div>
 			</div>
