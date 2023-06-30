@@ -22,6 +22,7 @@ const FooterSocials = () => {
 			<IconContext.Provider value={{size: 20}}>
 				{SOCIALS_ITEMS.map((item) => (
 					<a
+						key={item.title}
 						aria-label={item.title}
 						href={item.link}
 						target='_blank'
