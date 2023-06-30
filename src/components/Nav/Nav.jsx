@@ -19,7 +19,7 @@ const Nav = () => {
 	};
 
 	const NAV_ITEMS = [
-		{title: 'About', link: '#about'},
+		// {title: 'About', link: '#about'},
 		{title: 'Tools', link: '#tools'},
 		{title: 'Work', link: '#work'},
 		{title: 'Contact', link: '#contact'},
